@@ -21,10 +21,23 @@
             <span class="brand-name">Military Essentials</span>
         </div>
         <div class="nav-right">
-            <a href="#tos" class="nav-link">Terms of Service</a>
-            <a href="#privacy" class="nav-link">Privacy Policy</a>
+            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <div class="sidebar" id="sidebar">
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">&times;</button>
+        <nav class="sidebar-nav">
+            <a href="#tos" class="sidebar-link">Terms of Service</a>
+            <a href="#privacy" class="sidebar-link">Privacy Policy</a>
+        </nav>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <main class="content">
         <section id="home" class="section active">
@@ -237,6 +250,11 @@
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Military Essentials&trade;. All rights reserved.</p>
+        <p>This website and its contents are operated under the administration of Military Essentials&trade;. Development and technical implementation by ArchiveAnt.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
