@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Military Essentials</title>
+    <meta name="description" content="Professional Discord bot hosting and management services by Military Essentials. Reliable uptime, secure infrastructure, and expert support.">
+    <meta name="keywords" content="discord bot hosting, bot management, discord bots, cloud hosting, military essentials">
+    <meta name="author" content="Military Essentials">
+    <meta name="theme-color" content="#5865f2">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Military Essentials - Discord Bot Hosting">
+    <meta property="og:description" content="Professional Discord bot hosting and management services">
+    <meta property="og:image" content="/logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    
+    <title>Military Essentials - Professional Discord Bot Hosting</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
 </head>
 <body>
-    <div class="animated-background">
+    <!-- Loading overlay -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Animated background -->
+    <div class="animated-background" aria-hidden="true">
         <div class="circle circle-large"></div>
         <div class="circle circle-medium"></div>
         <div class="circle circle-small"></div>
@@ -15,13 +40,21 @@
         <div class="circle circle-medium-2"></div>
     </div>
 
-    <nav class="navbar">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-left">
             <img src="logo.jpg" alt="Military Essentials Logo" class="logo">
             <span class="brand-name">Military Essentials</span>
         </div>
         <div class="nav-right">
-            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
+            <button class="hamburger-menu" 
+                    id="hamburgerMenu" 
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="sidebar">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -29,46 +62,81 @@
         </div>
     </nav>
 
-    <div class="sidebar" id="sidebar">
-        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">&times;</button>
-        <nav class="sidebar-nav">
-            <a href="#tos" class="sidebar-link">Terms of Service</a>
-            <a href="#privacy" class="sidebar-link">Privacy Policy</a>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" role="dialog" aria-label="Navigation menu" aria-modal="true">
+        <button class="sidebar-close" 
+                id="sidebarClose" 
+                aria-label="Close navigation menu">
+            &times;
+        </button>
+        <nav class="sidebar-nav" role="navigation" aria-label="Secondary navigation">
+            <a href="#home" class="sidebar-link" data-section="home">
+                <span class="link-icon" aria-hidden="true"></span>
+                Home
+            </a>
+            <a href="#tos" class="sidebar-link" data-section="tos">
+                <span class="link-icon" aria-hidden="true"></span>
+                Terms of Service
+            </a>
+            <a href="#privacy" class="sidebar-link" data-section="privacy">
+                <span class="link-icon" aria-hidden="true"></span>
+                Privacy Policy
+            </a>
         </nav>
-    </div>
+    </aside>
 
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
 
-    <main class="content">
-        <section id="home" class="section active">
+    <!-- Main content -->
+    <main class="content" id="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active" aria-label="Home">
             <div class="hero">
-                <h1>Military Essentials Bot Services</h1>
-                <p>Professional Discord bot hosting and management</p>
+                <h1 class="fade-in">Military Essentials Bot Services</h1>
+                <p class="fade-in delay-1">Professional Discord bot hosting and management</p>
+                <div class="hero-features fade-in delay-2">
+                    <div class="feature-card">
+                        <h3>High Performance</h3>
+                        <p>Lightning-fast infrastructure with 99.9% uptime</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Secure Hosting</h3>
+                        <p>Enterprise-grade security for your bot credentials</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>24/7 Monitoring</h3>
+                        <p>Continuous uptime and performance tracking</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="tos" class="section">
+        <!-- Terms of Service Section -->
+        <section id="tos" class="section" aria-labelledby="tos-heading">
             <div class="policy-container">
-                <h1>Terms of Service</h1>
+                <h1 id="tos-heading">Terms of Service</h1>
                 
-                <h3>Military Essentials Bot Services – Hosting Agreement</h3>
+                <h2>Military Essentials Bot Services — Hosting Agreement</h2>
                 
-                <p><strong>Effective Date:</strong> [Insert Date]</p>
-                <p><strong>Service Provider:</strong> Military Essentials Bot Services ("MEBS," "we," "us," "our")</p>
-                <p><strong>User:</strong> ("Client," "you," "your")</p>
+                <div class="policy-meta">
+                    <p><strong>Effective Date:</strong> February 1, 2026</p>
+                    <p><strong>Service Provider:</strong> Military Essentials Bot Services ("MEBS," "we," "us," "our")</p>
+                    <p><strong>User:</strong> ("Client," "you," "your")</p>
+                </div>
                 
                 <p>This Terms of Service Agreement ("Agreement") governs your use of hosting and infrastructure services provided by Military Essentials Bot Services for Discord bots and related automation systems.</p>
                 
-                <p>By submitting a bot or service for hosting, you agree to the terms below.</p>
+                <p class="highlight-text">By submitting a bot or service for hosting, you agree to the terms below.</p>
                 
                 <h2>1. Service Scope</h2>
                 <p>MEBS provides managed hosting services for Discord bots and related backend systems. Services may include:</p>
                 <ul>
                     <li>Bot deployment and cloud hosting</li>
-                    <li>Uptime monitoring</li>
-                    <li>Performance and stability management</li>
-                    <li>Database and file storage</li>
-                    <li>Basic infrastructure support</li>
+                    <li>Uptime monitoring and alerts</li>
+                    <li>Performance optimization and stability management</li>
+                    <li>Database and file storage solutions</li>
+                    <li>Technical infrastructure support</li>
+                    <li>Automatic restart and recovery systems</li>
                 </ul>
                 <p>MEBS acts solely as a technical hosting provider and does not claim ownership of your bot, source code, branding, or intellectual property.</p>
                 
@@ -76,16 +144,18 @@
                 <p>To enable hosting, you grant MEBS authorization to securely store and use:</p>
                 <ul>
                     <li>Discord Bot Tokens</li>
-                    <li>API keys</li>
+                    <li>API keys and webhooks</li>
                     <li>Environment variables and configuration secrets</li>
+                    <li>Database connection strings</li>
                 </ul>
                 <p>This authorization is strictly limited to purposes necessary to deploy, operate, maintain, and secure your hosted services.</p>
-                <p>MEBS agrees that:</p>
+                <p><strong>MEBS agrees that:</strong></p>
                 <ul>
-                    <li>Credentials will never be shared publicly</li>
+                    <li>Credentials will never be shared publicly or with third parties</li>
                     <li>Access is restricted to authorized personnel only</li>
-                    <li>Credentials are stored using secure access controls</li>
+                    <li>Credentials are stored using industry-standard encryption</li>
                     <li>Credentials are not used for development or distribution outside hosting operations</li>
+                    <li>Access logs are maintained for security auditing</li>
                 </ul>
                 
                 <h2>3. User Responsibilities</h2>
@@ -95,165 +165,241 @@
                     <li>Your software does not contain malware, token grabbers, self-bots, or harmful automation</li>
                     <li>You own or have proper rights to all code and assets</li>
                     <li>You will rotate credentials immediately if a security issue is suspected</li>
+                    <li>You will not use services for illegal activities or spam</li>
+                    <li>You are responsible for your bot's behavior and compliance with applicable laws</li>
                 </ul>
                 <p>MEBS reserves the right to suspend or terminate hosting if your service violates platform rules, laws, or this Agreement.</p>
                 
                 <h2>4. Service Availability</h2>
                 <p>MEBS makes reasonable efforts to maintain uptime but does not guarantee uninterrupted service. Downtime may occur due to:</p>
                 <ul>
-                    <li>Scheduled maintenance</li>
+                    <li>Scheduled maintenance (with advance notice when possible)</li>
                     <li>Infrastructure or hardware failures</li>
-                    <li>Security incidents</li>
-                    <li>Third-party provider outages</li>
+                    <li>Security incidents or mitigation measures</li>
+                    <li>Third-party provider outages (Discord, cloud providers)</li>
+                    <li>DDoS attacks or network issues</li>
+                    <li>Emergency updates or patches</li>
                 </ul>
-                <p>MEBS is not liable for losses caused by downtime or service interruptions.</p>
+                <p>MEBS is not liable for losses caused by downtime or service interruptions. We will make reasonable efforts to communicate significant outages.</p>
                 
                 <h2>5. Security Practices</h2>
                 <p>We implement reasonable security measures, including:</p>
                 <ul>
-                    <li>Restricted system and panel access</li>
-                    <li>Credential access controls</li>
-                    <li>Infrastructure monitoring</li>
-                    <li>Network and firewall protections</li>
+                    <li>Restricted system and panel access with multi-factor authentication</li>
+                    <li>Encrypted credential storage and transmission</li>
+                    <li>Infrastructure and intrusion monitoring</li>
+                    <li>Network firewalls and DDoS protection</li>
+                    <li>Regular security audits and updates</li>
+                    <li>Isolated hosting environments per client</li>
                 </ul>
-                <p>No system can be guaranteed completely secure, and you acknowledge this risk.</p>
+                <p>No system can be guaranteed completely secure, and you acknowledge this inherent risk in any online service.</p>
                 
                 <h2>6. Intellectual Property</h2>
-                <p>All intellectual property rights in your bot, including code, data, and branding, remain your property. Hosting services do not transfer ownership to MEBS.</p>
+                <p>All intellectual property rights in your bot, including source code, data, and branding, remain your exclusive property. Hosting services do not transfer ownership to MEBS. You grant us only the limited license necessary to operate your hosted service.</p>
                 
                 <h2>7. Suspension and Termination</h2>
-                <p>Either party may terminate hosting services at any time.</p>
-                <p>Upon termination:</p>
+                <p>Either party may terminate hosting services at any time with reasonable notice.</p>
+                <p><strong>Upon termination:</strong></p>
                 <ul>
-                    <li>Stored credentials will be deleted within a reasonable timeframe</li>
-                    <li>Hosting data may be removed after a short retention period</li>
+                    <li>Stored credentials will be securely deleted within 30 days</li>
+                    <li>Hosting data may be removed after a 7-day retention period for recovery</li>
                     <li>You are responsible for revoking or regenerating old tokens</li>
+                    <li>Final backups may be provided upon request (fees may apply)</li>
                 </ul>
+                <p>MEBS may immediately suspend services for violations of this Agreement or to comply with legal requirements.</p>
                 
                 <h2>8. Limitation of Liability</h2>
                 <p>MEBS is not liable for:</p>
                 <ul>
-                    <li>Data loss</li>
-                    <li>Revenue loss</li>
+                    <li>Data loss or corruption</li>
+                    <li>Revenue loss or business interruption</li>
                     <li>Account penalties from Discord or other platforms</li>
                     <li>Third-party misuse of your bot</li>
+                    <li>Consequential, indirect, or punitive damages</li>
                 </ul>
-                <p>Liability, if any, is limited to the amount paid for hosting services during the most recent billing period.</p>
+                <p>Total liability, if any, is limited to the amount paid for hosting services during the most recent 3-month billing period.</p>
                 
                 <h2>9. Indemnification</h2>
-                <p>You agree to indemnify and hold MEBS harmless from claims or damages arising from:</p>
+                <p>You agree to indemnify and hold MEBS harmless from claims, damages, or expenses arising from:</p>
                 <ul>
-                    <li>Your bot's functionality</li>
+                    <li>Your bot's functionality or content</li>
                     <li>User interactions with your service</li>
-                    <li>Violations of laws or platform policies</li>
+                    <li>Violations of laws, platform policies, or third-party rights</li>
+                    <li>Your breach of this Agreement</li>
                 </ul>
                 
                 <h2>10. Changes to Terms</h2>
-                <p>We may update these Terms of Service at any time. Continued use of services after updates constitutes acceptance of the revised terms.</p>
+                <p>We may update these Terms of Service at any time. Material changes will be communicated via email or service notifications. Continued use of services after updates constitutes acceptance of the revised terms.</p>
                 
-                <p><strong>By using Military Essentials Bot Services, you acknowledge that you have read and agreed to this Terms of Service.</strong></p>
+                <h2>11. Governing Law and Disputes</h2>
+                <p>This Agreement is governed by applicable laws. Any disputes will be resolved through good faith negotiation or, if necessary, binding arbitration.</p>
+                
+                <div class="policy-footer">
+                    <p><strong>By using Military Essentials Bot Services, you acknowledge that you have read, understood, and agreed to this Terms of Service.</strong></p>
+                    <p class="last-updated">Last updated: February 1, 2026</p>
+                </div>
             </div>
         </section>
 
-        <section id="privacy" class="section">
+        <!-- Privacy Policy Section -->
+        <section id="privacy" class="section" aria-labelledby="privacy-heading">
             <div class="policy-container">
-                <h1>Privacy Policy</h1>
+                <h1 id="privacy-heading">Privacy Policy</h1>
                 
-                <h3>Military Essentials Bot Services – Hosting Privacy Policy</h3>
+                <h2>Military Essentials Bot Services — Hosting Privacy Policy</h2>
                 
-                <p><strong>Effective Date:</strong> [Insert Date]</p>
-                <p><strong>Service Provider:</strong> Military Essentials Bot Services ("MEBS," "we," "us," "our")</p>
+                <div class="policy-meta">
+                    <p><strong>Effective Date:</strong> February 1, 2026</p>
+                    <p><strong>Service Provider:</strong> Military Essentials Bot Services ("MEBS," "we," "us," "our")</p>
+                </div>
                 
                 <p>This Privacy Policy explains how Military Essentials Bot Services collects, uses, stores, and protects information in connection with our hosting services.</p>
                 
-                <p>By using our services, you agree to the practices described below.</p>
+                <p class="highlight-text">By using our services, you agree to the practices described below.</p>
                 
                 <h2>1. Information We Collect</h2>
                 <p>To provide hosting services, we may collect and process:</p>
                 
                 <h3>Account and Contact Information</h3>
                 <ul>
-                    <li>Discord User ID</li>
+                    <li>Discord User ID and username</li>
                     <li>Email address (if provided)</li>
-                    <li>Service configuration details</li>
+                    <li>Payment information (processed by third-party payment providers)</li>
+                    <li>Service configuration details and preferences</li>
                 </ul>
                 
-                <h3>Bot Credentials</h3>
+                <h3>Bot Credentials and Configuration</h3>
                 <ul>
                     <li>Discord Bot Tokens</li>
-                    <li>API keys</li>
+                    <li>API keys and webhooks</li>
                     <li>Environment variables and configuration secrets</li>
+                    <li>Database credentials and connection strings</li>
                 </ul>
                 
-                <h3>Operational Data</h3>
+                <h3>Operational and Technical Data</h3>
                 <ul>
-                    <li>Server logs</li>
+                    <li>Server logs and access logs</li>
                     <li>Error and crash reports</li>
-                    <li>Performance metrics</li>
-                    <li>Uptime statistics</li>
+                    <li>Performance metrics and resource usage</li>
+                    <li>Uptime statistics and monitoring data</li>
+                    <li>IP addresses for security purposes</li>
                 </ul>
                 
-                <p>We do not intentionally collect private Discord messages unless your bot is designed to log them. Responsibility for end-user data collected by your bot remains with you.</p>
+                <p><strong>Important:</strong> We do not intentionally collect private Discord messages or user content unless your bot is designed to log them. Responsibility for end-user data collected by your bot remains with you.</p>
                 
                 <h2>2. How We Use Information</h2>
                 <p>We use collected information solely to:</p>
                 <ul>
-                    <li>Deploy and operate hosted services</li>
-                    <li>Monitor performance and uptime</li>
+                    <li>Deploy, operate, and maintain hosted services</li>
+                    <li>Monitor performance, uptime, and resource usage</li>
                     <li>Diagnose and resolve technical issues</li>
-                    <li>Maintain system security</li>
+                    <li>Maintain system and infrastructure security</li>
+                    <li>Prevent fraud and abuse</li>
+                    <li>Communicate service updates and technical notices</li>
+                    <li>Improve our hosting infrastructure and services</li>
                 </ul>
-                <p>We do not sell or trade credentials or hosting data.</p>
+                <p><strong>We do not:</strong></p>
+                <ul>
+                    <li>Sell or trade credentials or hosting data</li>
+                    <li>Use your bot for our own purposes</li>
+                    <li>Share data with advertisers or marketers</li>
+                    <li>Access your data beyond operational necessity</li>
+                </ul>
                 
                 <h2>3. Credential Security</h2>
-                <p>Credentials are treated as confidential and protected using reasonable safeguards, including:</p>
+                <p>Credentials are treated as highly confidential and protected using industry-standard safeguards:</p>
                 <ul>
-                    <li>Secure storage environments</li>
-                    <li>Restricted personnel access</li>
-                    <li>Access control systems</li>
-                    <li>Monitoring and logging of access</li>
+                    <li>Encrypted storage using AES-256 or equivalent</li>
+                    <li>Encrypted transmission over TLS/SSL</li>
+                    <li>Restricted personnel access with authentication</li>
+                    <li>Access control systems with audit logging</li>
+                    <li>Regular security reviews and penetration testing</li>
+                    <li>Isolated hosting environments per client</li>
                 </ul>
-                <p>Credentials are never publicly exposed and are only used for hosting operations.</p>
+                <p>Credentials are never publicly exposed and are only used for authorized hosting operations.</p>
                 
                 <h2>4. Data Retention</h2>
-                <p>We retain credentials and operational logs only while your hosting service remains active. After termination:</p>
+                <p>We retain credentials and operational data only while your hosting service remains active. After termination:</p>
                 <ul>
-                    <li>Credentials are deleted within a reasonable timeframe</li>
-                    <li>Logs may be retained briefly for security or auditing before deletion</li>
+                    <li>Credentials are securely deleted within 30 days</li>
+                    <li>Operational logs are retained for 90 days for security auditing, then deleted</li>
+                    <li>Billing records are retained as required by law</li>
+                    <li>Backup data is securely wiped according to our data deletion procedures</li>
                 </ul>
                 
-                <h2>5. Third-Party Infrastructure</h2>
-                <p>We may use third-party cloud or infrastructure providers. These providers may process limited technical data as required to maintain hosting services. We select providers that follow industry-standard security practices.</p>
+                <h2>5. Third-Party Infrastructure and Service Providers</h2>
+                <p>We may use third-party cloud and infrastructure providers to deliver our services, including:</p>
+                <ul>
+                    <li>Cloud hosting providers (e.g., AWS, Google Cloud, Railway)</li>
+                    <li>Database services</li>
+                    <li>Monitoring and analytics platforms</li>
+                    <li>Payment processors (we do not store payment card information)</li>
+                </ul>
+                <p>We select providers that follow industry-standard security practices and comply with data protection regulations. These providers process limited technical data necessary to maintain hosting services.</p>
                 
                 <h2>6. Your Responsibilities for End Users</h2>
                 <p>If your bot collects or processes data from end users, you are solely responsible for:</p>
                 <ul>
-                    <li>Providing your own privacy policy</li>
-                    <li>Complying with applicable data protection laws</li>
+                    <li>Providing your own privacy policy to end users</li>
+                    <li>Complying with applicable data protection laws (GDPR, CCPA, etc.)</li>
+                    <li>Obtaining necessary consents from users</li>
                     <li>Managing and securing user data collected by your bot</li>
+                    <li>Responding to user data requests (access, deletion, etc.)</li>
                 </ul>
                 <p>MEBS acts only as a hosting provider and does not control how your bot handles user information.</p>
                 
-                <h2>7. Your Rights</h2>
-                <p>You may request:</p>
+                <h2>7. Data Security Incidents</h2>
+                <p>In the event of a security breach affecting your data:</p>
                 <ul>
-                    <li>Information about stored credentials</li>
-                    <li>Deletion of your credentials</li>
-                    <li>Termination of hosting services</li>
+                    <li>We will notify you promptly upon discovery</li>
+                    <li>We will provide details about the nature of the breach</li>
+                    <li>We will take immediate steps to mitigate the impact</li>
+                    <li>We will assist you in rotating affected credentials</li>
                 </ul>
-                <p>Requests must be made through official support channels.</p>
                 
-                <h2>8. Policy Updates</h2>
-                <p>We may update this Privacy Policy as our services evolve. Continued use of services after updates constitutes acceptance of the revised policy.</p>
+                <h2>8. Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Request information about stored credentials and data</li>
+                    <li>Request deletion of your credentials and data</li>
+                    <li>Access operational logs related to your service</li>
+                    <li>Terminate hosting services at any time</li>
+                    <li>Export your data before termination</li>
+                    <li>Opt out of non-essential communications</li>
+                </ul>
+                <p>Requests must be made through official support channels and will be processed within 30 days.</p>
                 
-                <p><strong>By using Military Essentials Bot Services, you acknowledge that you have read and agreed to this Privacy Policy.</strong></p>
+                <h2>9. International Data Transfers</h2>
+                <p>Your data may be processed in regions where our infrastructure is located. We ensure appropriate safeguards are in place for international data transfers in compliance with applicable laws.</p>
+                
+                <h2>10. Children's Privacy</h2>
+                <p>Our services are not intended for users under 13 years of age. We do not knowingly collect information from children under 13.</p>
+                
+                <h2>11. Policy Updates</h2>
+                <p>We may update this Privacy Policy as our services evolve or to comply with legal requirements. Material changes will be communicated via email or service notifications. Continued use of services after updates constitutes acceptance of the revised policy.</p>
+                
+                <h2>12. Contact Information</h2>
+                <p>For privacy-related questions or requests, please contact us through our official support channels.</p>
+                
+                <div class="policy-footer">
+                    <p><strong>By using Military Essentials Bot Services, you acknowledge that you have read, understood, and agreed to this Privacy Policy.</strong></p>
+                    <p class="last-updated">Last updated: February 1, 2026</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Military Essentials&trade;. All rights reserved.</p>
-        <p>This website and its contents are operated under the administration of Military Essentials&trade;. Development and technical implementation by ArchiveAnt.</p>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <p class="footer-brand">&copy; 2026 Military Essentials&trade;. All rights reserved.</p>
+            <p class="footer-credit">This website and its contents are operated under the administration of Military Essentials&trade;.<br>Development and technical implementation by ArchiveAnt.</p>
+            <div class="footer-links">
+                <a href="#tos" class="footer-link">Terms</a>
+                <span class="footer-separator">•</span>
+                <a href="#privacy" class="footer-link">Privacy</a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
